@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Shojumaru&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+html, body, button, #__next {
+  margin: 0;
+  padding: 0;
+  color: black;
+  font-family: Kanit;
+}
+
+/* Header styles */
+.home {
+  display:block;
+  width: 100%;
+}
+
+.hamburger {
+  z-index: 2000;
+}
+
+.mobile-menu.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+/* About Section */
+.about-section {
+  background: #333;
+}
+
+/* Footer */
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 1rem;
+}
+
+/* HeroSection */
+.heroSection {
+  width: 100%;
+  height: calc(100vh);
+  margin-top: -3.97rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.imageContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.25);  /* Grey with 95% opacity */
+  z-index: 2;  /* Layered on top of the image */
+}
+
+.imageContainer {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.heroText {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  left: 50%;
+  margin-top: 3rem;
+  transform: translate(-50%, -50%);  /* This should center it */
+  z-index: 1;
+  text-align: center;
+  color: white;
+}
+
+
+.heroText h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+.heroText p {
+  font-size: 2rem;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: rgba(31, 41, 55, 0.0);
+  width: 100%;
+  color: white;
+}
+
+.navbar a {
+  font-size: .7rem;
+  text-decoration: none;
+  text-align: center;
+}
+
+.navbar a:hover {
+  background-color: #ddd;
+  padding: 10px 20px;
+  color: black;
+}
+
+.menu-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile Hero styles */
+@media (max-width: 768px) {
+  .heroSection {
+    height: calc(101vh);
+    margin-top: 0;
+    margin-top: -3.79rem;
+  }
+  .heroText {
+    font-size: 1.2rem;
+    top: 40%;  /* Updated this line */
+    left: 50%;  /* Center horizontally */
+    transform: translate(-50%, -50%);  /* Center vertically and horizontally */
+  }
+
+  .heroText h1 {
+    font-size: 2.5rem;
+  }
+
+  .heroText p {
+    font-size: 1.2rem;
+  }
+
+  .heroButton {
+    font-size: 1rem;
+    padding: 15px 30px;
+  }
+  
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+    color: white;
+  }
+
+  .navbar a {
+    display: block;  /* Stack them vertically */
+    text-align: center;
+    width: 100%;
+  }
+
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+/* Hamburger & Close button styles */
+.hamburger,
+.close-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.turn .bar1 {
+  transform: rotate(-45deg) translate(-5px, 7px);
+}
+
+/* Fade out the second bar */
+.turn .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.turn .bar3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .header.desktop {
+    display: none;
+  }
+}
