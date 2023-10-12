@@ -126,6 +126,14 @@ html, body, button, #__next {
   align-items: center;
 }
 
+.hide-scrollbar {
+  scrollbar-width: none; /* For Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* For Chrome, Safari */
+}
+
 /* Mobile Hero styles */
 @media (max-width: 768px) {
   .heroSection {
