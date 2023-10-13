@@ -24,7 +24,7 @@ const AboutUs = () => {
   return (
     <div className="flex flex-wrap p-10 bg-gray-100 items-center">
       {/* Left Side - About Us */}
-      <div className="w-full md:w-1/2 p-5">
+      <div className="w-full md:w-1/2 p-0 md:p-5">
         <h1 className="text-4xl font-bold mb-4">About Us</h1>
         <p className="text-lg">
           Welcome to our newest RA Sushi restaurant! Come in and explore your adventurous side. From the unique blend of creative sushi and the innovative menu from our Asian kitchen to the handcrafted cocktails from the bar, the energetic atmosphere at RA is where you can celebrate life and embrace the unexpected.
@@ -35,7 +35,7 @@ const AboutUs = () => {
           Located at 229 West 43rd Street between 7th & 8th avenues.
           <br></br>
           <br></br>
-          <a role="button" href="tel:8187302166" target='_blank' class="btn btn-lg bg-red-600 font-kanit text-white text-center no-underline text-3xl mt-4">8187302166 </a>
+          <a role="button" href="tel:8187302166" target='_blank' class="btn btn-lg bg-red-600 font-kanit text-white text-center no-underline text-2xl md:text-3xl mt-4">8187302166 </a>
           <br></br>
           <br></br>
           PARKING
@@ -44,7 +44,7 @@ const AboutUs = () => {
         </p>
         <br></br>
           <a role="button" href="https://www.google.com/maps" target='_blank' 
-          class="btn btn-lg bg-red-600 font-kanit text-white text-center no-underline text-3xl mt-4 mr-[1rem]">123 w. Pear Street, Unit 3, West Hollywood, CA 90036 </a>
+          class="btn btn-lg bg-red-600 font-kanit text-white text-center no-underline text-md md:text-3xl mt-4 md:mr-[1rem]">123 w. Pear Street, Unit 3, West Hollywood, CA 90036 </a>
         
 {/*         <div className="mockup-phone rotate-[-0deg]">
           <div className="camera"></div> 
@@ -61,8 +61,9 @@ const AboutUs = () => {
 
       {/* Right Side - Hours Table */}
       <div className="flex flex-col items-center w-full md:w-1/2">
-        <div className="overflow-x-auto sm:-mx-6 lg:-mx-8 w-3/4">
-          <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+        {/* Added overflow-x-auto and adjusted width for mobile responsiveness */}
+        <div className="overflow-x-auto w-full md:w-3/4">
+          <div className="inline-block min-w-full py-2">
             <div className="overflow-hidden shadow-lg">
               <table className="min-w-full text-left text-sm font-light">
                 <thead className="border-b bg-white font-medium">

@@ -27,7 +27,7 @@ const SideNav = ({ categories }) => {
 
   useEffect(() => {
     const handleAutoSelect = () => {
-      const navbarHeight = 145;
+      const navbarHeight = 132;
       categories.forEach((category, index) => {
         const element = document.getElementById(category.id);
         const rect = element.getBoundingClientRect();
@@ -75,7 +75,7 @@ const SideNav = ({ categories }) => {
         </ul>
       </div>
       {/* Mobile version */}
-      <div className="relative md:hidden flex overflow-x-auto pb-2 sticky top-0 z-50 bg-white h-[57px] hide-scrollbar">
+      <div className="relative md:hidden flex overflow-x-auto top-0 z-50 bg-white h-[57px] hide-scrollbar">
         <div ref={containerRef} className="flex space-x-4">
           {categories.map((category, index) => (
             <button

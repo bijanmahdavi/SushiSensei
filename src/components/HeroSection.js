@@ -9,20 +9,27 @@ const HeroSection = () => {
     const imageContainer = document.querySelector('.imageContainer');
     const scrollY = window.scrollY;
 
-    // Move text up while scrolling down
-    heroText.style.transform = `translate(-50%, calc(-50% + ${-scrollY * 0.3}px))`;
-    heroText.style.opacity = 1 - scrollY / 1000;
+    // Null check for heroText and imageContainer
+    if (heroText && imageContainer) {
+      try {
+        // Move text up while scrolling down
+        heroText.style.transform = `translate(-50%, calc(-50% + ${-scrollY * 0.3}px))`;
+        heroText.style.opacity = 1 - scrollY / 1000;
 
-    // If scrolling direction changes to upwards, instantly reset image position
-    if (scrollY < lastScroll) {
-      imageContainer.style.transform = 'translateY(0)';
-    } else {
-      // Otherwise, continue with the parallax effect
-      imageContainer.style.transform = `translateY(${scrollY * 0.1}px)`;
+        // If scrolling direction changes to upwards, instantly reset image position
+        if (scrollY < lastScroll) {
+          imageContainer.style.transform = 'translateY(0)';
+        } else {
+          // Otherwise, continue with the parallax effect
+          imageContainer.style.transform = `translateY(${scrollY * 0.1}px)`;
+        }
+      } catch (error) {
+        console.error("An error occurred:", error);
+      }
+
+      // Update lastScroll for the next scroll event
+      lastScroll = scrollY;
     }
-
-    // Update lastScroll for the next scroll event
-    lastScroll = scrollY;
   };
 
   useEffect(() => {

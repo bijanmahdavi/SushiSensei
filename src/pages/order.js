@@ -11,7 +11,7 @@ const menuData = [
       id: '1',
       name: 'Sushi',
       items: [
-        { id: '1', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', badges: ['Popular', 'Spicy', 'Vegan'] },
+        { id: '1', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', badges: ['Popular', 'Spicy', 'Vegan'], description: 'A classic roll with crab, avocado, and cucumber.' },
         { id: '2', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
         { id: '3', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
         { id: '4', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
