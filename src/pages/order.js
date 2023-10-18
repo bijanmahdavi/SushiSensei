@@ -12,9 +12,9 @@ const menuData = [
       name: 'Sushi',
       items: [
         { id: '1', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', badges: ['Popular', 'Spicy', 'Vegan'], description: 'A classic roll with crab, avocado, and cucumber.' },
-        { id: '2', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
-        { id: '3', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
-        { id: '4', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
+        { id: '2', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
+        { id: '3', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
+        { id: '4', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
         // ... more items
       ],
     },
@@ -22,7 +22,7 @@ const menuData = [
       id: '2',
       name: 'Drinks',
       items: [
-        { id: '5', name: 'Coke', price: 2.99, image: '/images/rolls_royce_roll.jpg' },
+        { id: '5', name: 'Coke', price: 2.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
         // ... more items
       ],
     },
@@ -30,10 +30,10 @@ const menuData = [
         id: '3',
         name: 'Baked Rolls',
         items: [
-          { id: '8', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', badges: ['Popular', 'Spicy', 'Vegan'] },
-          { id: '9', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
-          { id: '10', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
-          { id: '11', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
+          { id: '8', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', badges: ['Popular', 'Spicy', 'Vegan'], description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '9', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '10', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '11', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
           // ... more items
         ],
       },
@@ -41,10 +41,10 @@ const menuData = [
         id: '4',
         name: 'Hand Rolls1',
         items: [
-          { id: '12', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', badges: ['Popular', 'Spicy', 'Vegan'] },
-          { id: '13', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
-          { id: '14', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
-          { id: '15', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
+          { id: '12', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', badges: ['Popular', 'Spicy', 'Vegan'], description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '13', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '14', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '15', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
           // ... more items
         ],
       },
@@ -52,10 +52,10 @@ const menuData = [
         id: '5',
         name: 'Hand Rolls2',
         items: [
-          { id: '16', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', badges: ['Popular', 'Spicy', 'Vegan'] },
-          { id: '17', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
-          { id: '18', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
-          { id: '19', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
+          { id: '16', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', badges: ['Popular', 'Spicy', 'Vegan'], description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '17', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '18', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '19', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
           // ... more items
         ],
       },
@@ -63,10 +63,10 @@ const menuData = [
         id: '6',
         name: 'Hand Rolls3',
         items: [
-          { id: '20', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', badges: ['Popular', 'Spicy', 'Vegan'] },
-          { id: '21', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
-          { id: '22', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
-          { id: '23', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
+          { id: '20', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', badges: ['Popular', 'Spicy', 'Vegan'], description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '21', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '22', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '23', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
           // ... more items
         ],
       },
@@ -74,10 +74,10 @@ const menuData = [
         id: '7',
         name: 'Hand Rolls4',
         items: [
-          { id: '24', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', badges: ['Popular', 'Spicy', 'Vegan'] },
-          { id: '25', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
-          { id: '26', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
-          { id: '27', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
+          { id: '24', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', badges: ['Popular', 'Spicy', 'Vegan'], description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '25', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '26', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '27', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
           // ... more items
         ],
       },
@@ -85,10 +85,10 @@ const menuData = [
         id: '8',
         name: 'Hand Rolls5',
         items: [
-          { id: '12', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', badges: ['Popular', 'Spicy', 'Vegan'] },
-          { id: '13', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
-          { id: '14', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg' },
-          { id: '15', name: 'California Roll', price: 12.99 },
+          { id: '12', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', badges: ['Popular', 'Spicy', 'Vegan'], description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '13', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '14', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
+          { id: '15', name: 'California Roll', price: 12.99, image: '/images/rolls_royce_roll.jpg', description: 'A classic roll with crab, avocado, and cucumber.' },
           // ... more items
         ],
       },
