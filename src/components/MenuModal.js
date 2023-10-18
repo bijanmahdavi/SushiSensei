@@ -83,7 +83,7 @@ const MenuModal = ({ item, onClose }) => {
         <div className="flex flex-col justify-center items-start w-full md:w-1/2 mt-4 md:mt-0 md:ml-8">
           <h2 className="text-2xl font-semibold mb-2">{item.name}</h2>
           <span className="text-lg text-gray-600 mb-4">${item.price}</span>
-          <p className="text-md text-gray-600 mb-4">{item.price}</p>
+          <p className="text-md text-gray-600 mb-4">{item.description}</p>
           <div className="flex flex-wrap">
             {item.badges && item.badges.map((badge) => renderBadge(badge))}
           </div>

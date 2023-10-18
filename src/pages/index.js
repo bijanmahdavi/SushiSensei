@@ -2,6 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import Header from '../components/Header';
 import HeroSection from '../components/HeroSection';
+import VideoHeroSection from '../components/VideoHeroSection';
 import MenuSection from '../components/Menu';
 import Footer from '../components/Footer';
 import AboutUs from '../components/AboutSection';
@@ -15,7 +16,7 @@ function HomePage() {
         <meta name="keywords" content="sushi, local, restaurant" />
       </Head>
       <Header />
-      <HeroSection />
+      <VideoHeroSection />
       <MenuSection />
       <AboutUs />
       <Footer />

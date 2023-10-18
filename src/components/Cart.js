@@ -87,7 +87,7 @@ const Cart = ({ isOpen, onClose }) => {
             </ul>
             <div className="absolute bottom-0 left-0 w-full p-4 bg-white border-t">
               <div className="flex justify-between items-center mb-2">
-                <div className="text-xl font-semibold">
+                <div className="text-xl font-semibold text-gray-900">
                   Subtotal: ${totalPrice}
                 </div>
               </div>
