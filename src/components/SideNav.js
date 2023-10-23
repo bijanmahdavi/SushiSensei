@@ -1,9 +1,19 @@
 import { useState, useRef, useEffect } from 'react';
+import SearchComponent from './SearchComponent';
 
 const SideNav = ({ categories }) => {
   const [selectedCategory, setSelectedCategory] = useState(null);
+  const [isSearchOpen, setIsSearchOpen] = useState(false); // New state to toggle search
   const indicatorRef = useRef(null);
   const containerRef = useRef(null);
+
+  const onSearchClick = () => {
+    setIsSearchOpen(true); // Open search component
+  };
+
+  const onCloseSearch = () => {
+    setIsSearchOpen(false); // Close search component
+  };
 
   const handleScroll = (categoryId, index) => {
     const element = document.getElementById(categoryId);
@@ -17,13 +27,14 @@ const SideNav = ({ categories }) => {
 
     setSelectedCategory(categoryId);
 
-    const buttons = Array.from(containerRef.current.children);
-    if (buttons && buttons[index]) {
+    const buttons = Array.from(containerRef.current.children).slice(1); // Start from index 1
+    if (buttons[index]) {
       const rect = buttons[index].getBoundingClientRect();
       indicatorRef.current.style.width = `${rect.width}px`;
       indicatorRef.current.style.left = `${rect.left - containerRef.current.getBoundingClientRect().left}px`;
     }
   };
+
 
   useEffect(() => {
     const handleAutoSelect = () => {
@@ -34,7 +45,7 @@ const SideNav = ({ categories }) => {
 
         if (rect.top <= navbarHeight && rect.top >= 0) {
           setSelectedCategory(category.id);
-          const buttons = Array.from(containerRef.current.children);
+          const buttons = Array.from(containerRef.current.children).slice(1);
           if (buttons && buttons[index]) {
             const rect = buttons[index].getBoundingClientRect();
             indicatorRef.current.style.width = `${rect.width}px`;
@@ -59,9 +70,17 @@ const SideNav = ({ categories }) => {
 
   return (
     <>
+    {isSearchOpen && <SearchComponent menuData={categories} onClose={onCloseSearch} />}
       {/* Desktop version */}
       <div className="hidden md:block sticky top-16 h-screen w-[10vw] p-6 bg-gray-100 overflow-y-auto hide-scrollbar">
         <ul className="space-y-4">
+          <li>
+            <button className="text-lg font-semibold focus:outline-none"
+            onClick={onSearchClick}
+            >
+              🔍
+            </button>
+          </li>
           {categories.map((category) => (
             <li key={category.id}>
               <button
@@ -75,8 +94,14 @@ const SideNav = ({ categories }) => {
         </ul>
       </div>
       {/* Mobile version */}
-      <div className="relative md:hidden flex overflow-x-auto top-0 z-50 bg-white h-[57px] hide-scrollbar">
+      <div className="relative md:hidden flex overflow-x-auto top-0 z-25 bg-white h-[57px] hide-scrollbar">
         <div ref={containerRef} className="flex space-x-4">
+          <button 
+            className="text-sm ml-2 font-semibold focus:outline-none"
+            onClick={onSearchClick}
+          >
+            🔍
+          </button>
           {categories.map((category, index) => (
             <button
               key={category.id}

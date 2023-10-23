@@ -23,7 +23,7 @@ const Menu = () => {
       <Header />
       <div className="mx-auto py-12 w-full px-4 lg:px-16">
         <h1 className="text-4xl mb-6 text-center text-black">Our Menus</h1>
-        <ImageModal images={menuImages} columns="md:grid-cols-3" />  {/* <-- Use the ImageModal component here */}
+        <ImageModal images={menuImages} columns="md:grid-cols-3" />
       </div>
     </div>
   );

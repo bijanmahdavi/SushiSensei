@@ -6,6 +6,8 @@ import VideoHeroSection from '../components/VideoHeroSection';
 import MenuSection from '../components/Menu';
 import Footer from '../components/Footer';
 import AboutUs from '../components/AboutSection';
+import Hours from "../components/HoursComponent"
+import SEO from '../components/SEO';
 
 function HomePage() {
   return (
@@ -19,6 +21,8 @@ function HomePage() {
       <VideoHeroSection />
       <MenuSection />
       <AboutUs />
+      <Hours />
+      <SEO />
       <Footer />
     </div>
   );

@@ -101,7 +101,7 @@ const menuData = [
     const { cart } = useCart();
   
     const toggleCart = () => {
-      setIsCartOpen(!isCartOpen);
+      setIsCartOpen(!isCartOpen); 
     };
   
     const totalItemsInCart = cart.reduce((acc, item) => acc + item.quantity, 0);
@@ -150,7 +150,7 @@ const menuData = [
         <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
   
       {/* Main content */}
-      <div className="flex flex-col md:flex-row">
+      <div className="flex flex-col md:flex-row hide">
         {/* Desktop SideNav */}
         <div className="hidden md:block">
           <SideNav categories={menuData} />

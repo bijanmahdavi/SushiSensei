@@ -48,21 +48,23 @@ const Item = ({ item }) => {
     <div onClick={openModal} className="w-full md:w-auto">
       {/* Mobile Layout */}
       <div className="md:hidden flex flex-col items-start p-4 border rounded-md shadow-lg w-full">
-        <div className="flex w-full">
-          <div className="relative w-[120px] h-[120px]">
-            {item.badges?.includes('Popular') && renderBadge('Popular')}
-            <Image src={item.image} alt={item.name} width={120} height={120} />
+      <div className="flex w-full">
+        <div className="relative w-[120px] h-[120px] flex-none">
+          {item.badges?.includes('Popular') && renderBadge('Popular')}
+          <Image src={item.image} alt={item.name} width={120} height={120} />
+        </div>
+        <div className="flex-1 pl-4 min-w-0 flex flex-col">
+          <div className="font-medium truncate">{item.name}</div>
+          <div className="text-gray-500 truncate">${item.price}</div>
+          <div className="text-sm text-black mt-1 overflow-ellipsis overflow-hidden">
+            {item.description}
           </div>
-          <div className="flex-1 pl-4">
-            <div className="font-medium">{item.name}</div>
-            <div className="text-gray-500">${item.price}</div>
-            <div className="text-sm text-black mt-1">{item.description}</div>
-            <div className="mt-2 flex flex-wrap">
-              {item.badges && item.badges.map(badge => badge !== 'Popular' && renderBadge(badge))}
-            </div>
+          <div className="mt-2 flex flex-wrap">
+            {item.badges && item.badges.map(badge => badge !== 'Popular' && renderBadge(badge))}
           </div>
         </div>
       </div>
+    </div>
 
       {/* Desktop Layout */}
       <div className="hidden md:flex flex-col items-center p-6 border rounded-md shadow-sm w-full">

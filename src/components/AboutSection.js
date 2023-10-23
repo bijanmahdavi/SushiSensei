@@ -25,7 +25,7 @@ const AboutUs = () => {
     <div className="flex flex-wrap p-10 bg-gray-100 items-center">
       {/* Left Side - About Us */}
       <div className="w-full md:w-1/2 p-0 md:p-5">
-        <h1 className="text-4xl font-bold mb-4">About Us</h1>
+        <h1 className="text-4xl font-bold mb-4">Hours</h1>
         <p className="text-lg">
           Welcome to our newest RA Sushi restaurant! Come in and explore your adventurous side. From the unique blend of creative sushi and the innovative menu from our Asian kitchen to the handcrafted cocktails from the bar, the energetic atmosphere at RA is where you can celebrate life and embrace the unexpected.
           <br></br>
@@ -40,52 +40,32 @@ const AboutUs = () => {
           <br></br>
           PARKING
           <br></br>
-          123 w. Pear Street, Unit 3, West Hollywood, CA 90036
+          123 Santa Monica Blvd, Unit 3, West Hollywood, CA 90046
         </p>
         <br></br>
           <a role="button" href="https://www.google.com/maps" target='_blank' 
-          class="btn btn-lg bg-red-600 font-kanit text-white text-center no-underline text-md md:text-3xl mt-4 md:mr-[1rem]">123 w. Pear Street, Unit 3, West Hollywood, CA 90036 </a>
-        
-{/*         <div className="mockup-phone rotate-[-0deg]">
-          <div className="camera"></div> 
-          <div className="display">
-            <div className="artboard artboard-demo phone-1">
-              <img className ="h-full w-fill"
-                  src="/images/water.jpg" 
-                  alt="Description"
-                />
-            </div>
-          </div>
-        </div> */}
+          class="btn btn-lg bg-red-600 font-kanit text-white text-center no-underline text-md md:text-3xl mt-4 md:mr-[1rem]">123 Santa Monica Blvd, West Hollywood, CA 90046 </a>
       </div>
 
       {/* Right Side - Hours Table */}
       <div className="flex flex-col items-center w-full md:w-1/2">
-        {/* Added overflow-x-auto and adjusted width for mobile responsiveness */}
-        <div className="overflow-x-auto w-full md:w-3/4">
-          <div className="inline-block min-w-full py-2">
-            <div className="overflow-hidden shadow-lg">
-              <table className="min-w-full text-left text-sm font-light">
-                <thead className="border-b bg-white font-medium">
-                  <tr>
-                    <th scope="col" className="px-10 py-5">Hours</th>
-                    <th scope="col" className="px-10 py-5">Open</th>
-                    <th scope="col" className="px-10 py-5">Close</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"].map((day, index) => (
-                    <tr key={index} className={`border-b hover:bg-neutral-200 ${getBackgroundColor(index, index)}`}>
-                      <td className="whitespace-nowrap px-10 py-5 font-medium">{day}</td>
-                      <td className="whitespace-nowrap px-10 py-5">11:00 AM</td>
-                      <td className="whitespace-nowrap px-10 py-5">10:00 PM</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+        <a href="https://maps.app.goo.gl/pA62yvXqurqa9nRh8" target="_blank" rel="noopener noreferrer">
+          <div className="mockup-phone rotate-[-0deg]">
+            <div className="camera"></div> 
+            <div className="display">
+
+              <div className="artboard artboard-demo phone-1">
+
+                <img className ="h-full w-fill"
+                    src="/images/map.png" 
+                    alt="Description"
+                  />
+
+              </div>
+
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   );

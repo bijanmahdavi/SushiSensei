@@ -1,6 +1,6 @@
 import Item from './Item';
 
-const Category = ({ category}) => {
+const Category = ({ category }) => {
 
   return (
     <div id={category.id} className={`mb-12 mt-12 rounded`}>
