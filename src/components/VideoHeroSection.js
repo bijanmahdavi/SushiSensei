@@ -6,7 +6,7 @@ const VideoHeroSection = () => {
         <video
           src="/videos/hero-video.mov"
           type="video/quicktime"
-          class="clip w-full" autoPlay loop muted>   
+          class="clip w-full h-auto" autoPlay loop muted>   
         </video>
       </div>
       <div className="heroText">

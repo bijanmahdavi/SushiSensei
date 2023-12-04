@@ -109,7 +109,7 @@ const menuData = [
     return (
       <>
         <Head>
-          <title>About Us - Local Sushi Restaurant</title>
+          <title>Order Now - West Hollywood Sushi Restaurant</title>
           <meta name="description" content="Learn more about our local sushi restaurant." />
           <meta name="keywords" content="sushi, local, restaurant" />
         </Head>

@@ -29,7 +29,7 @@ const Header = () => {
       </div>
 
       {/* Mobile Sidebar */}
-      <div className={`fixed inset-y-0 left-0 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out z-40 bg-gray-800 opacity-95 w-3/4 h-screen top-14 overflow-y-auto md:hidden`}>
+      <div className={`fixed inset-y-0 left-0 transform ${isOpen ? 'translate-x-0' : '-translate-x-full'} transition-transform duration-300 ease-in-out z-40 bg-gray-800 opacity-95 w-3/4 h-[screen] top-[3.78rem] overflow-y-auto md:hidden`}>
         {<Navbar/>}
       </div>
     </>
